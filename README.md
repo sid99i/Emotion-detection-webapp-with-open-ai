@@ -9,7 +9,7 @@ Welcome to the repository containing Python code for a real-time emotion detecti
 - [Installation](#installation)
 - [Example](#example)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 This repository demonstrates the integration of multiple technologies, including real-time emotion detection using computer vision and a chatbot powered by OpenAI's GPT-3 model. The web application is built using Flask, a lightweight web framework.
@@ -51,10 +51,5 @@ This repository demonstrates the integration of multiple technologies, including
 
 ## Contributing
 Contributions are welcome! Feel free to enhance the features or fix any issues by creating a pull request.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 *Note: This README provides an overview of the code's functionality and usage. For detailed implementation, please refer to the source code in `app.py`.*
