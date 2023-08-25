@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+      
+      video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+      }
+      
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: rgba(0,0,0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 0 20px;
+        z-index: 2;
+      }
+      
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+        z-index: 3;
+      }
+      
+      .drawer {
+        position: absolute;
+        top: 50px;
+        left: -200px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        justify-content: center;
+        padding: 20px;
+        z-index: 2;
+        transition: left 0.3s ease-out;
+      }
+      
+      .drawer.open {
+        left: 0;
+      }
+      
+      .drawer a {
+        color: #fff;
+        margin: 10px 0;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      
+      .toggle-btn {
+        position: absolute;
+        background-color: (0,0,0);
+        color: (0,0,0,0.7);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay loop muted>
+      <source src={{ url_for('static', filename="video.mp4") }} type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <header>
+      <h2>My Header</h2>
+      <button class="toggle-btn">More</button>
+    </header>
+    <div class="drawer">
+      <a href="/chatbot/">Chatbot</a>
+      <a href="#">Sign-in/Sign-up</a>  
+      <a href="#">About</a>
+    </div>
+  </body>
+  <script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const drawer = document.querySelector('.drawer');
+
+    toggleBtn.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+    toggleBtn.style.backgroundColor = toggleBtn.style.backgroundColor === 'black' ? 'white' : 'black';
+    toggleBtn.style.color = toggleBtn.style.color === 'white' ? 'black' : 'white';
+  });
+  </script>
+  
+</html>
