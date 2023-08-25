@@ -52,4 +52,4 @@ This repository demonstrates the integration of multiple technologies, including
 ## Contributing
 Contributions are welcome! Feel free to enhance the features or fix any issues by creating a pull request.
 
-*Note: This README provides an overview of the code's functionality and usage. For detailed implementation, please refer to the source code in `app.py`.*
+*Note: This README provides an overview of the code's functionality and usage. For detailed implementation, please refer to the source code in `mainn.py`.*
